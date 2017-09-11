@@ -24,7 +24,7 @@ export function makePage(number: number, text: string | number, isActive: boolea
 export function createDataForModel(currentPage: number, numPages: number): uibParentModel {
     let data = { currentPage, numPages };
 
-    Object.defineProperties(data, {
+    Object.defineProperties(data,  {
         numPages: {
             get() {
                 return numPages;
@@ -33,4 +33,13 @@ export function createDataForModel(currentPage: number, numPages: number): uibPa
     });
 
     return data;
+}
+
+export function setToFirstPage(this: uibPagination) {
+
+    if(this.currentPage != 1)
+        this.currentPage = 1;
+    else
+        this.$emit("change");
+
 }

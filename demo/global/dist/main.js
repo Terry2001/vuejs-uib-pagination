@@ -15,6 +15,11 @@ var app = new Vue({
             this.pagination1.currentPage = pageNo;
         },
 
+        setToFirstPage: function () {
+            //this.pagination1.changeToSetToFirstPage += 1;
+            this.$refs.pageBar.setToFirstPage();
+        },
+
         pageChanged: function () {
             console.log('Page changed to: ' + this.pagination1.currentPage);
         },

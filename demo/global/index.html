@@ -12,17 +12,22 @@
     <div id="app" class="container">
         <h4>Default</h4>
 
-        <div is="uib-pagination" :total-items="totalItems" v-model="pagination1" @change="pageChanged()"></div>
+        <div is="uib-pagination" :total-items="totalItems" v-model="pagination1" ref="pageBar" @change="pageChanged()"></div>
 
+        <!--
         <div is="uib-pagination" :boundary-links="true" :total-items="totalItems" v-model="pagination1" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></div>
 
         <div is="uib-pagination" :direction-links="false" :boundary-links="true" :total-items="totalItems" v-model="pagination1"></div>
 
         <div is="uib-pagination" :direction-links="false" :total-items="totalItems" v-model="pagination1"></div>
 
+-->
+
         <pre>The selected page no: {{pagination1.currentPage}}</pre>
 
         <button type="button" class="btn btn-info" @click="setPage(3)">Set current page to: 3</button>
+
+        <button type="button" class="btn btn-info" @click="setToFirstPage()">Force set current page to: 1</button>
 
         <hr>
 
