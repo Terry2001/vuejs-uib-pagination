@@ -39,3 +39,4 @@ jspm_packages
 # Demo dist
 demo/commonjs/dist
 demo/es6/dist
+/.idea

@@ -1,4 +1,5 @@
 <div class="pagination">
+    <div style="float:left; padding: 5px 10px 5px 0px; color: #0366d6;"> {{ currentPage }} / {{ totalPages }}</div>
     <span role="menu" v-if="boundaryLinks" :class="{ disabled: isNoPreviousOrDisabled }" class="pagination-first">
         <a href @click="selectPage(1, $event)" :disabled="isNoPreviousOrDisabled" v-uib-tabindex-toggle="isNoPreviousOrDisabled">{{ getText('first') }}</a>
     </span>
